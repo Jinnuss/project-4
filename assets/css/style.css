@@ -22,6 +22,7 @@
 .header__content ul {
   display: flex;
   list-style: none;
+  margin-right: 160px;
 }
 .header__content__logo {
   color: black;
