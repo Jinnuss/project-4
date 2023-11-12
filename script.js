@@ -18,7 +18,7 @@ menu.onclick = () => {
         list.style.display = "block";
     }
 }
-list.onclick= ()=>{
+list.onclick = () => {
     list.style.display = "none";
 }
 
@@ -37,6 +37,7 @@ const box3 = document.getElementById("box-3");
 const box4 = document.getElementById("box-4");
 const box5 = document.getElementById("box-5");
 
+
 btn1.onclick = () => {
     for (const item of box1.classList) {
         if (item == "none") {
@@ -50,6 +51,7 @@ btn1.onclick = () => {
     btn4.style.borderBottom = "none";
     btn5.style.borderBottom = "none";
 
+    box1.classList.add("animation");
     box1.classList.add("active");
     box2.classList.add("none");
     box3.classList.add("none");
@@ -69,6 +71,7 @@ btn2.onclick = () => {
     btn5.style.borderBottom = "none";
 
 
+    box2.classList.add("animation");
     box1.classList.add("none");
     box2.classList.add("active");
     box3.classList.add("none");
@@ -88,7 +91,7 @@ btn3.onclick = () => {
     btn5.style.borderBottom = "none";
 
 
-
+    box3.classList.add("animation");
     box1.classList.add("none");
     box3.classList.add("active");
     box2.classList.add("none");
@@ -108,7 +111,7 @@ btn4.onclick = () => {
     btn5.style.borderBottom = "1px solid transparent";
 
 
-
+    box4.classList.add("animation");
     box1.classList.add("none");
     box4.classList.add("active");
     box3.classList.add("none");
@@ -127,7 +130,7 @@ btn5.onclick = () => {
     btn4.style.borderBottom = "1px solid transparent";
     btn1.style.borderBottom = "1px solid transparent";
 
-
+    box5.classList.add("animation");
     box1.classList.add("none");
     box5.classList.add("active");
     box3.classList.add("none");
@@ -135,4 +138,10 @@ btn5.onclick = () => {
     box2.classList.add("none");
 }
 
+
+box2.onscroll = () => {
+    if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300) {
+        box2.classList.add("scroll");
+    }
+}
 
