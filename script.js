@@ -139,9 +139,4 @@ btn5.onclick = () => {
 }
 
 
-box2.onscroll = () => {
-    if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300) {
-        box2.classList.add("scroll");
-    }
-}
 
