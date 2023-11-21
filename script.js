@@ -10,7 +10,6 @@ window.onscroll = () => {
 
 const menu = document.getElementById("menu");
 const list = document.getElementById("list");
-const list1 = document.getElementById("list-1");
 menu.onclick = () => {
     if (list.style.display != "none") {
         list.style.display = "none";

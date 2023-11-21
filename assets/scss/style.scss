@@ -1,3 +1,22 @@
+@keyframes example {
+    0% {
+        bottom: -200px;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+.animation {
+    position: relative;
+    animation-name: example;
+    animation-timing-function: easy-out;
+    animation-duration: 0.5s;
+}
+
 //header
 .header {
     position: sticky;
@@ -20,7 +39,7 @@
     }
 
     &__content {
-        padding: 25px 0px;
+        padding: 20px 0px;
         display: flex;
         justify-content: space-between;
 
@@ -36,15 +55,20 @@
             font-weight: 600;
         }
 
-        &__taskbar--item {
-            color: white;
+        &__taskbar {
             padding: 10px;
-            margin: 10px;
-        }
 
-        &__taskbar--item:hover {
-            color: var(--hover);
-            text-decoration: none;
+            &--item {
+                color: white;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            &--item:hover {
+                color: var(--hover);
+                text-decoration: none;
+            }
+
         }
 
         &__user {
@@ -64,6 +88,7 @@
         }
 
         &__menu {
+            cursor: pointer;
             font-size: 24px;
             color: white;
             display: none;
@@ -403,18 +428,182 @@
     }
 }
 
-@media (max-width: 991.98px) {
-    .header {
-        &__content {
-            ul {
-                display: none;
+.section-3 {
+    background-image: url("../images/colleagues-working-cozy-office-medium-shot.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &__content {
+        padding: 110px 0;
+        position: relative;
+        z-index: 2;
+        color: white;
+
+        &__title {
+            text-align: center;
+            font-size: 46px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        &__section1 {
+            padding: 0 120px;
+            margin-bottom: 50px;
+
+            &__title {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
             }
+
+            &__desc {
+                font-size: 20px;
+            }
+        }
+
+        &__section2 {
+            padding: 0 120px;
+            margin-bottom: 50px;
+
+            &__title {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            &__desc {
+                font-size: 20px;
+            }
+        }
+
+        &__section3 {
+            padding: 0 120px;
+            margin-bottom: 50px;
+
+            &__title {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            &__desc {
+                font-size: 20px;
+            }
+        }
+
+        &__section4 {
+            display: flex;
+            justify-content: center;
+
+            &__inq {
+                font-size: 20px;
+                margin-right: 20px;
+                padding: 10px;
+            }
+
+            &__btn {
+                cursor: pointer;
+                transition: all 0.3s;
+                color: var(--bg-2);
+                border: 3px solid var(--bg-2);
+                font-size: 16px;
+                font-weight: 600;
+                padding: 10px;
+                border-radius: 40px;
+            }
+
+            &__btn:hover {
+                color: white;
+                background-color: #80d0c7;
+            }
+
+        }
+    }
+}
+
+.section-3::before {
+    content: "";
+    background: linear-gradient(50deg, #13547a 0%, #80d0c7 100%);
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.section-4 {
+    padding: 20px 0;
+
+    &__title {
+        font-size: 46px;
+        font-weight: 700;
+    }
+
+    &__img {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
-    .header__content__menu {
-        display: block;
+    &__content {
+
+        &__box {
+            display: flex;
+            flex-direction: column;
+
+            &__card {
+                border: none;
+
+                &__header {
+                    background-color: white;
+                    padding: 0;
+                    margin-bottom: 10px;
+                }
+
+                &__btn {
+                    border: 2px solid #2482e6eb;
+                    margin-bottom: 10px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: black;
+                    font-size: 20px;
+                    font-weight: 600;
+                    background-color: white;
+                    transition: all 0.3s;
+                }
+
+                &__btn:hover {
+                    text-decoration: none;
+                    border-radius: 20px;
+                }
+            }
+        }
+
     }
+}
+
+.sc4 {
+    justify-content: space-between;
+}
+
+@media (max-width: 991.98px) {
+    // .header {
+    //     &__content {
+    //         ul {
+    //             display: none;
+    //         }
+    //     }
+    // }
+
+    // .header__content__menu {
+    //     display: block;
+    // }
 }
 
 @media (max-width: 767.98px) {
@@ -424,6 +613,7 @@
 
         &__content {
             justify-content: start;
+
             &__left {
                 margin: 0;
             }
