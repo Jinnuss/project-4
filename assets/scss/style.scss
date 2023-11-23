@@ -55,21 +55,21 @@
             font-weight: 600;
         }
 
-        &__taskbar {
-            padding: 10px;
+        // &__taskbar {
+        //     padding: 10px;
 
-            &--item {
-                color: white;
-                padding: 10px;
-                margin: 10px;
-            }
+        //     &--item {
+        //         color: white;
+        //         padding: 10px;
+        //         margin: 10px;
+        //     }
 
-            &--item:hover {
-                color: var(--hover);
-                text-decoration: none;
-            }
+        //     &--item:hover {
+        //         color: var(--hover);
+        //         text-decoration: none;
+        //     }
 
-        }
+        // }
 
         &__user {
             height: 45px;
@@ -92,6 +92,56 @@
             font-size: 24px;
             color: white;
             display: none;
+        }
+    }
+
+    .header2 {
+        margin-top: 10px;
+
+        &__content {
+            &__taskbar {
+                display: flex;
+                list-style: none;
+
+                &--item {
+                    margin-right: 30px;
+                    color: white;
+                }
+
+                &--item:hover {
+                    color: var(--hover);
+                    text-decoration: none;
+                }
+
+            }
+        }
+    }
+
+    .header3 {
+        margin-top: 10px;
+
+        &__content {
+            &__taskbar {
+                transition: height 1s;
+                height: 0;
+                padding-left: 0;
+
+
+                &--item {
+                    margin-bottom: 20px;
+
+                    a {
+                        display: none;
+                        color: white;
+                    }
+
+                    a:hover {
+                        color: var(--hover);
+                        text-decoration: none;
+                    }
+                }
+
+            }
         }
     }
 }
@@ -449,7 +499,6 @@
         }
 
         &__section1 {
-            padding: 0 120px;
             margin-bottom: 50px;
 
             &__title {
@@ -464,7 +513,6 @@
         }
 
         &__section2 {
-            padding: 0 120px;
             margin-bottom: 50px;
 
             &__title {
@@ -479,7 +527,6 @@
         }
 
         &__section3 {
-            padding: 0 120px;
             margin-bottom: 50px;
 
             &__title {
@@ -588,22 +635,102 @@
     }
 }
 
+.section-5 {
+    background-color: #F0F8FF;
+
+    &__content {
+        padding: 110px 0;
+
+        &__title {
+            text-align: center;
+            font-size: 46px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        &__bt {
+            justify-content: space-between;
+        }
+
+        &__map {
+
+            iframe {
+                border-radius: 20px;
+                width: 100%;
+                object-fit: cover;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__right {
+            &__title {
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            &__desc {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            &__phone {
+                margin-top: 10px;
+                font-size: 20px;
+
+                p {
+                    cursor: pointer;
+                    display: inline;
+                    color: #80d0c7;
+                    transition: all 0.3s;
+                }
+
+                p:hover {
+                    color: black;
+                }
+            }
+
+            &__email {
+                font-size: 20px;
+
+                p {
+                    cursor: pointer;
+                    display: inline;
+                    color: #80d0c7;
+                    transition: all 0.3s;
+                }
+
+                p:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
 .sc4 {
     justify-content: space-between;
 }
 
-@media (max-width: 991.98px) {
-    // .header {
-    //     &__content {
-    //         ul {
-    //             display: none;
-    //         }
-    //     }
-    // }
+.section-6 {
+    padding: 110px 0;
+    height: 300px;
+    text-align: center;
 
-    // .header__content__menu {
-    //     display: block;
-    // }
+    .item {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .header2__content__taskbar--item {
+        display: none;
+    }
+
+    .header__content__menu {
+        padding: 6px;
+        display: block;
+    }
 }
 
 @media (max-width: 767.98px) {

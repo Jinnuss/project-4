@@ -1,4 +1,3 @@
-
 window.onscroll = () => {
     var header = document.getElementById("header");
     if (document.body.scrollTop > 98 || document.documentElement.scrollTop > 98) {
@@ -8,18 +7,6 @@ window.onscroll = () => {
     }
 };
 
-const menu = document.getElementById("menu");
-const list = document.getElementById("list");
-menu.onclick = () => {
-    if (list.style.display != "none") {
-        list.style.display = "none";
-    } else {
-        list.style.display = "block";
-    }
-}
-list.onclick = () => {
-    list.style.display = "none";
-}
 
 
 

@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
-    scroll-margin-top: 99px;
+    scroll-margin-top: 90px;
 
 }
 
@@ -38,6 +38,10 @@
 }
 
 @media (max-width: 991.98px) {
+    * {
+        scroll-margin-top: 300px;
+    }
+
     .container {
         max-width: 720px;
     }
@@ -52,6 +56,7 @@
 }
 
 @media (max-width: 767.98px) {
+
     .container {
         max-width: 540px;
     }
@@ -66,6 +71,7 @@
 }
 
 @media (max-width: 575.98px) {
+
     .container {
         max-width: 100%;
         padding: 0 15px;
