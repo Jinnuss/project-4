@@ -604,8 +604,17 @@
                 }
             }
             dem += 1;
+        }
 
-
+        window.addEventListener("resize", myFunction);
+        function myFunction() {
+            let wHeader = $(header).width();
+            if (wHeader > 974) {
+                list.style.height = "0px";
+                for (let item of items) {
+                    item.style.display = "none";
+                }
+            }
         }
         list.onclick = () => {
             list.style.height = "0px";
